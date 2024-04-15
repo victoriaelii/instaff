@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+
+    <link href="css/registro.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Registro de nuevos usuarios</h2>
+        </div>
+        <form action="register.php" method="POST">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required pattern="[a-zA-Z][a-zA-Z0-9_]{1,}" title="Username debe comenzar con una letra y solo puede contener letras, números y guiones bajos (_)."><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required minlength="6"><br><br>
+
+            <label for="confirm_password">Confirmar Password:</label><br>
+            <input type="password" id="confirm_password" name="confirm_password" required minlength="6"><br><br>
+
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="apellidos">Apellidos:</label><br>
+            <input type="text" id="apellidos" name="apellidos"><br><br>
+            
+            <label for="genero">Género:</label><br>
+            <select name="genero" id="genero" required>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+                <option value="X">Prefiero no especificar</option>
+            </select><br><br>
+
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <input type="submit" value="Registrar">
+        </form>
+
+        <div class="button-container">
+            <a href="login.html" class="button">Iniciar Sesión</a>
+            <a href="index.html" class="button">Regresar</a>
+        </div>
+    </div>
+</body>
+</html>
+
